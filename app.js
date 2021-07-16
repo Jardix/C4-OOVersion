@@ -171,8 +171,12 @@ class Player {
 }
 
 document.getElementById('start-game').addEventListener('click', () => {
-    let p1 = new Player(document.getElementById('p1-color').value, document.getElementById('p1-name').value);
-    let p2 = new Player(document.getElementById('p2-color').value, document.getElementById('p2-name').value);
+    let p1 = new Player(
+        document.getElementById('p1-color').value,
+        document.getElementById('p1-name').value);
+    let p2 = new Player(
+        document.getElementById('p2-color').value,
+        document.getElementById('p2-name').value);
     let height = document.getElementById('height').value;
     let width = document.getElementById('width').value;
     new Game(p1, p2, height, width);
@@ -181,5 +185,5 @@ document.getElementById('start-game').addEventListener('click', () => {
 // Todo list:
 // Allow for custom heights and widths. // Done!
 // Add a player 'name' input, as well as color. // Done!
-// Style the CSS a little better.
+// Style the CSS a little better. 
 // Highlight the winning pieces (maybe)

@@ -8,12 +8,51 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<input type="number" id="height" value="6">
-		<input type="number" id="width" value="7">
-		<input type="text" id="p1-name" placeholder="Player 1 Name:">
-		<input type="text" id="p2-name" placeholder="Player 2 Name:">
-		<input type="text" id="p1-color" placeholder="Player 1 Color:" />
-		<input type="text" id="p2-color" placeholder="Player 2 Color:" />
+		<!-- Dimension box. Placed in a class with id's inside for selector specificity in CSS. -->
+		<div class="dimBox">
+			<label for="height">Please Select the game board height:</label>
+			<input type="number" id="height" value="6" name="height" />
+			<label for="width">Please Select the game board width:</label>
+			<input type="number" id="width" value="7" name="width" />
+		</div>
+
+		<!-- Name box. Placed in a class with id's inside for selector specificity in CSS. -->
+		<div class="nameBox">
+			<label for="p1-name">Please enter the name for Player 1:</label>
+			<input
+				type="text"
+				id="p1-name"
+				placeholder="Player 1 Name:"
+				name="p1-name"
+			/>
+			<label for="p2-name">Please enter the name for Player 2:</label>
+			<input
+				type="text"
+				id="p2-name"
+				placeholder="Player 2 Name:"
+				name="p2-name"
+			/>
+		</div>
+
+		<!-- Color Box. Placed in a class with id's inside for selector specificity in CSS. -->
+		<div class="colorBox">
+			<label for="p1-color">Please Enter the Color for Player 1:</label>
+			<input
+				type="text"
+				id="p1-color"
+				placeholder="Player 1 Color:"
+				name="p2-color"
+			/>
+
+			<label for="p2-color">Please Enter the Color for Player 2:</label>
+			<input
+				type="text"
+				id="p2-color"
+				placeholder="Player 2 Color:"
+				name="p1-color"
+			/>
+		</div>
+
 		<button id="start-game">Start Game:</button>
 
 		<div id="game">

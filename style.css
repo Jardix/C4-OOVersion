@@ -1,8 +1,9 @@
 /* Game board table.*/
+
 #board td {
 	width: 50px;
 	height: 50px;
-	border: solid 1px #666;
+	border: solid 1px black;
 }
 
 /* Pieces are divs within game table cells; drawn as colored circles. */
@@ -15,9 +16,98 @@
 
 /* Column top is a table row of clickable areas for each column.*/
 #column-top td {
-	border: dashed 1px lightgray;
+	border: dashed 1px black;
 }
 
 #column-top td:hover {
-    background-color: gold;
+	background-color: gold;
+}
+
+body {
+	background: lightsteelblue;
+}
+
+.dimBox {
+	display: inline-block;
+
+	margin: auto;
+
+	border: 3px solid black;
+	margin: 20px;
+	padding: 10px;
+	background-color: lightskyblue;
+}
+
+.dimBox #height {
+	display: block;
+	border: 2px solid black;
+	margin: 5px;
+}
+
+.dimBox #width {
+	display: block;
+	border: 2px solid black;
+	margin: 5px;
+}
+
+.nameBox {
+	display: inline-block;
+
+	margin: auto;
+
+	border: 3px solid black;
+	margin: 20px;
+	padding: 10px;
+	background-color: lightskyblue;
+}
+
+.nameBox #p1-name {
+	display: block;
+	border: 2px solid black;
+	margin: 5px;
+}
+
+.nameBox #p2-name {
+	display: block;
+	border: 2px solid black;
+	margin: 5px;
+}
+
+.colorBox {
+	display: inline-block;
+	margin: auto;
+
+	border: 3px solid black;
+	margin: 20px;
+	padding: 10px;
+	background-color: lightskyblue;
+}
+
+.colorBox #p1-color {
+	display: block;
+	border: 2px solid black;
+	margin: 5px;
+}
+
+.colorBox #p2-color {
+	display: block;
+	border: 2px solid black;
+	margin: 5px;
+}
+
+#start-game {
+	display: block;
+	border: 5px solid rgb(0, 61, 0);
+	border-radius: 25px;
+	margin: auto;
+	margin-bottom: 20px;
+	height: 60px;
+	width: 160px;
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-size: 24px;
+	background-color: green;
+}
+
+#start-game:hover {
+	cursor: pointer;
 }
