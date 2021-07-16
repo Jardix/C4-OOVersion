@@ -4,7 +4,7 @@
 class Game {
     // Use a constructor to assign player 1, player 2, the height and width of the game board, and set default values on those.
 
-    constructor(p1, p2, height = 6, width = 7) {
+    constructor(p1, p2, height, width) {
         // Grab the current values of these variables using 'this'
         this.players = [p1, p2];
         this.height = height;
@@ -172,7 +172,9 @@ class Player {
 document.getElementById('start-game').addEventListener('click', () => {
     let p1 = new Player(document.getElementById('p1-color').value);
     let p2 = new Player(document.getElementById('p2-color').value);
-    new Game(p1, p2);
+    let height = document.getElementById('height');
+    let width = document.getElementById('width');
+    new Game(p1, p2, height, width);
 });
 
 // Todo list:
