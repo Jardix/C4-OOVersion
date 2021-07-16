@@ -116,7 +116,7 @@ class Game {
         // check for win
         if (this.checkForWin()) {
             this.gameOver = true;
-            return this.endGame(`The ${this.currPlayer.color} Player won!`);
+            return this.endGame(`${this.currPlayer.name} won!`);
         }
 
         // check for tie
@@ -164,21 +164,22 @@ class Game {
 }
 
 class Player {
-    constructor(color) {
+    constructor(color, name) {
         this.color = color;
+        this.name = name;
     }
 }
 
 document.getElementById('start-game').addEventListener('click', () => {
-    let p1 = new Player(document.getElementById('p1-color').value);
-    let p2 = new Player(document.getElementById('p2-color').value);
+    let p1 = new Player(document.getElementById('p1-color').value, document.getElementById('p1-name').value);
+    let p2 = new Player(document.getElementById('p2-color').value, document.getElementById('p2-name').value);
     let height = document.getElementById('height').value;
     let width = document.getElementById('width').value;
     new Game(p1, p2, height, width);
 });
 
 // Todo list:
-// Allow for custom heights and widths.
+// Allow for custom heights and widths. // Done!
+// Add a player 'name' input, as well as color. // Done!
 // Style the CSS a little better.
-// Add a player 'name' input, as well as color. 
 // Highlight the winning pieces (maybe)
